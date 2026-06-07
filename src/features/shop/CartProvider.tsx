@@ -1,5 +1,5 @@
 import { useReducer, type ReactNode } from "react";
-import { CartContext } from "./cartContext";
+import { CartContext } from "./CartContext";
 import { type CartItem, cartReducer } from "./cartReducer";
 
 type ProviderProps = {
