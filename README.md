@@ -1,4 +1,4 @@
-# Shop App
+# Shop App — React Hooks Practice
 
 **[Live demo](https://deeptiwari690.github.io/shop-app/)**
 
