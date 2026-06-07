@@ -6,14 +6,14 @@
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  animation: slide-up 0.25s ease-out;
+  animation: slide-down 0.25s ease-out;
   margin-block-start: 1rem;
   margin-inline: auto;
   min-width: min(24rem, calc(100vw - 2rem));
   overflow-y: auto;
 }
 
-@keyframes slide-up {
+@keyframes slide-down {
   from {
     transform: translateY(-2rem);
     opacity: 0;
