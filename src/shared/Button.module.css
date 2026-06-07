@@ -1,0 +1,79 @@
+.button {
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color 0.3s ease-out,
+    transform 0.1s ease-out;
+}
+
+.paddingEqual {
+  padding: 0.5rem;
+}
+
+.sm {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.lg {
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.circle {
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.surface {
+  background-color: var(--clr-surface);
+}
+
+@media (any-hover: hover) {
+  .surface:hover:not(:disabled) {
+    background-color: var(--clr-surface-object);
+  }
+}
+
+.surface:focus-visible {
+  background-color: var(--clr-surface-object);
+}
+
+.surfaceObject {
+  background-color: var(--clr-surface-object);
+}
+
+@media (any-hover: hover) {
+  .surfaceObject:hover:not(:disabled) {
+    background-color: var(--clr-surface-object-high);
+  }
+}
+
+.surfaceObject:focus-visible {
+  background-color: var(--clr-surface-object-high);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--clr-outline);
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.95);
+}

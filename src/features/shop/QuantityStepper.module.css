@@ -1,0 +1,10 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.count {
+  font-weight: 500;
+  font-size: 1.75rem;
+}

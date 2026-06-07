@@ -1,0 +1,132 @@
+.card {
+  background-color: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  animation: slide-up 0.25s ease-out;
+  margin-block: var(--header-height) auto;
+  margin-inline: auto;
+  min-width: min(24rem, calc(100vw - 2rem));
+}
+
+.empty {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 0;
+  color: var(--clr-text-muted);
+}
+
+.badge {
+  position: absolute;
+  inset-block-start: -0.1875rem;
+  inset-inline-end: -0.9375rem;
+  background-color: var(--clr-surface-object);
+  border: 1px solid var(--clr-border);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.icon {
+  position: relative;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card::backdrop {
+  background-color: var(--clr-bg);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+}
+
+.title {
+  font-weight: 500;
+  grid-row: 1;
+  grid-column: 1;
+  text-transform: uppercase;
+}
+
+.clear {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.close {
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: end;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (width >= 500px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.amount {
+  color: var(--clr-text-muted);
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-block-start: 1px solid var(--clr-border);
+  padding-block-start: 1.5rem;
+}
+
+.label {
+  font-size: 1.25rem;
+  color: var(--clr-text-muted);
+  font-weight: 500;
+}
+
+.total {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
