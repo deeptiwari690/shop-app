@@ -32,25 +32,25 @@ export function Cart({ isOpen, onClose }: Props) {
     >
       <div className={styles.header}>
         <h2 className={styles.title}>Cart</h2>
-        {cart.length > 0 && (
+        <div className={styles.controls}>
+          {cart.length > 0 && (
+            <Button
+              variant="surfaceObject"
+              onClick={onClear}
+            >
+              Clear cart
+            </Button>
+          )}
           <Button
+            aria-label="Close cart"
+            shape="circle"
+            uniformPadding
+            onClick={onClose}
             variant="surfaceObject"
-            onClick={onClear}
-            className={styles.clear}
           >
-            Clear cart
+            <X />
           </Button>
-        )}
-        <Button
-          aria-label="Close cart"
-          className={styles.close}
-          shape="circle"
-          uniformPadding
-          onClick={onClose}
-          variant="surfaceObject"
-        >
-          <X />
-        </Button>
+        </div>
       </div>
       {cart.length === 0 ? (
         <div className={styles.empty}>

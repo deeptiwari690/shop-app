@@ -7,9 +7,22 @@
   flex-direction: column;
   gap: 1.75rem;
   animation: slide-up 0.25s ease-out;
-  margin-block: var(--header-height) auto;
+  margin-block-start: 1rem;
   margin-inline: auto;
   min-width: min(24rem, calc(100vw - 2rem));
+  overflow-y: auto;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .empty {
@@ -39,25 +52,21 @@
   position: relative;
 }
 
-@keyframes slide-up {
-  from {
-    transform: translateY(-2rem);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .card::backdrop {
   background-color: var(--clr-bg);
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -66,17 +75,6 @@
   grid-row: 1;
   grid-column: 1;
   text-transform: uppercase;
-}
-
-.clear {
-  grid-row: 2;
-  grid-column: 2;
-}
-
-.close {
-  grid-row: 1;
-  grid-column: 2;
-  justify-self: end;
 }
 
 .items {

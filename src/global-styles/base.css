@@ -115,3 +115,7 @@ ol {
 ::placeholder {
   color: var(--clr-text-muted);
 }
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}

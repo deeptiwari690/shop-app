@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import { Button } from "./shared";
 import { ProductList } from "./features/shop/ProductList";
@@ -10,14 +10,6 @@ export function App() {
   const [cartOpen, setCartOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const { cart } = useCart();
-
-  useEffect(() => {
-    const height = headerRef.current?.getBoundingClientRect().height ?? 0;
-    document.documentElement.style.setProperty(
-      "--header-height",
-      `${height}px`,
-    );
-  });
 
   return (
     <div className={styles.layout}>
