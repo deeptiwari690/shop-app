@@ -1,5 +1,7 @@
 # Shopping Cart — React Hooks Practice
 
+**[Live demo](https://deeptiwari690.github.io/shop-app/)**
+
 A focused practice project to build mental models for `useState`, `useReducer`, and `useContext` before touching any state management library. Each hook is introduced because the previous one breaks down — not as a syllabus item.
 
 ## What's built
